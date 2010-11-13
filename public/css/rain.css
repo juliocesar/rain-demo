@@ -43,9 +43,11 @@ body    { height: 700px; width: 1200px; overflow: hidden; margin: 0 auto; backgr
 #cloud2   { background: url(/img/cloud2.png) no-repeat top left; z-index: 2; -webkit-animation-name: cloud2 }
 #cloud3   { background: url(/img/cloud3.png) no-repeat top left; z-index: 3; -webkit-animation-name: cloud3; -webkit-animation-duration: 260s; -webkit-animation-iteration-count: infinite; -webkit-animation-timing-function: linear }
 #rain     { z-index: 5 }
-#controls { position: fixed; bottom: 10px; right: 10px; padding: 0.5em; background: #fff; z-index: 11 }
-#controls input { display: block; border: 1px solid #ccc; width: 10em; font-family: inherit }
-footer  { position: fixed; bottom: 10px; left: 10px; border: 1px solid #000; padding: 0.5em; background: #fff; z-index: 10 }
+footer,
+#controls { position: fixed; bottom: 10px; padding: 0.5em; background: #FFF; border: 1px solid #000; z-index: 11 }
+#controls { right: 10px }
+#controls input { display: block; border: 1px solid #CCC; width: 10em; font-family: inherit }
+footer  { left: 10px }
 
 @-webkit-keyframes cloud1 {
   0%    { -webkit-transform: translate3d(-700px, 0, 0) }

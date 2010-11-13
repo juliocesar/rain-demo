@@ -10,9 +10,9 @@
       if (typeof config == 'undefined') {
         config = defaults;
       } else {
-        for (var property in defaults) { 
+        for (var property in defaults) {
           if (typeof config[property] == 'undefined') config[property] = defaults[property];
-        };        
+        };
       }
       self.config = config;
       var elt = document.getElementById(element);
@@ -30,7 +30,7 @@
     function runEngine() {
       self.enginePid = setInterval(function() { createDrop(self.config); }, 100 / self.config.intensity);
     }
-    
+
     function randomStartingPoint(angle) {
       return Math.floor(Math.random() * (self.stage.width + self.offset));
     }
@@ -51,14 +51,14 @@
         .animate({cy: self.stage.height, cx: cx}, layer, function() { drop.remove(); });
       return drop;
     }
-    
+
     // "class" methods
     self.setIntensity = function(intensity) {
       clearInterval(self.enginePid);
       self.config.intensity = intensity;
       self.enginePid = setInterval(function() { createDrop(self.config); }, 100 / self.config.intensity);
     };
-    
+
     window.onresize = function() {
       self.stage.height = window.innerHeight;
       self.stage.width = window.innerWidth;
