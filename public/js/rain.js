@@ -1,3 +1,5 @@
+// Rain.js
+// Copyright © Julio Cesar Ody
 (function(window, undefined) {
   if (typeof Raphael == 'undefined') throw "Rain needs Raphaël.js!";
 
