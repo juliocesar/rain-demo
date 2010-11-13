@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Rain.js demo</title>
+    <meta name="description" content="A simple rain engine in JavaScript" />
+    <meta name="author" content="awesomebydesign.com" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <link rel="stylesheet" href="/css/rain.css" />
+    <script src="/js/modernizr-1.6.min.js"></script>
+    <script type="text/javascript" src="http://use.typekit.com/dkf2yuv.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>    
+  </head>
+  <body>
+    <div id="city"></div>
+    <div id="rain"></div>
+    <div id="cloud1"></div>
+    <div id="cloud2"></div>
+    <div id="cloud3"></div>
+    <form id="controls">
+      <label for="intensity">Intensity</label>
+      <input type="range" min="1" max="10" value="5" id="intensity"/>
+      <label for="angle">Angle</label>
+      <input type="number" min="-40" max="40" value="10" step="10" id="angle"/>
+      <label for="size">Drop size</label>
+      <input type="number" min="1" max="10" step="1" id="size" value="5" />
+      <label for="speed">Speed</label>
+      <input type="number" min="10" max="1200" step="10" id="speed" value="500"/>
+    </form>
+    <footer>
+      Made with ♥ by <a href="http://awesomebydesign.com">Julio Cesar Ody</a>, with
+      massive help from <a href="http://github.com/cwalsh">Cameron Walsh</a>.
+      (<a href="https://github.com/juliocesar/rain.js">Get the source</a>)
+    </footer>
+  <script>
+    var _gaq = [['_setAccount', 'UA-XXXXXXX'], ['_trackPageview']];
+    (function(d, t) {
+      var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      g.async = true;
+      g.src = '//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s);
+    })(document, 'script');
+  </script>
+  <script src="/js/raphael-min.js"></script>
+  <script src="/js/rain.js"></script>
+  <script>
+    var rain = new Rain('rain', { angle: 10, intensity: 5, size: 5 }),
+      intensity = document.getElementById('intensity'),
+      angle = document.getElementById('angle'),
+      size = document.getElementById('size'),
+      speed = document.getElementById('speed');
+    intensity.onchange = function() {
+      rain.setIntensity(parseInt(this.value));
+    }
+    angle.onchange = function() {
+      rain.config.angle = parseInt(this.value);
+    };
+    speed.onchange = function() {
+      rain.config.speed = parseInt(this.value);
+    };
+    size.onchange = function() {
+      rain.config.size = parseInt(this.value);
+    };
+  </script>
+  </body>
+</html>
