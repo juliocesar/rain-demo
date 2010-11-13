@@ -21,11 +21,11 @@
       <label for="intensity">Intensity</label>
       <input type="range" min="1" max="10" value="5" id="intensity"/>
       <label for="angle">Angle</label>
-      <input type="number" min="-40" max="40" value="10" step="10" id="angle"/>
+      <input type="range" min="-40" max="40" value="10" step="10" id="angle"/>
       <label for="size">Drop size</label>
-      <input type="number" min="1" max="10" step="1" id="size" value="5" />
+      <input type="range" min="1" max="10" step="1" id="size" value="5" />
       <label for="speed">Speed</label>
-      <input type="number" min="10" max="1200" step="10" id="speed" value="500"/>
+      <input type="range" min="10" max="1200" step="100" id="speed" value="500"/>
     </form>
     <footer>
       Made with ♥ by <a href="http://awesomebydesign.com">Julio Cesar Ody</a>, with
@@ -53,7 +53,7 @@
       rain.setIntensity(parseInt(this.value));
     }
     angle.onchange = function() {
-      rain.config.angle = parseInt(this.value);
+      rain.config.angle = -parseInt(this.value);
     };
     speed.onchange = function() {
       rain.config.speed = parseInt(this.value);
