@@ -32,7 +32,7 @@ ul { list-style-type: none; list-style-position: inside }
 /* End reset */
 
 a       { cursor: pointer; font-weight: 700; text-decoration: none; color: #2A4AEE }
-body    { height: 700px; width: 1200px; overflow: hidden; margin: 0 auto; background: url(/img/background.png) no-repeat top left; color: #000; font-family: 'mostra-nuova-1', 'Helvetica Neue', 'Helvetica'; font-weight: 400 }
+body    { height: 100%; width: 100%; overflow: hidden; margin: 0 auto; background: url(/img/background.png) no-repeat top left; color: #000; font-family: 'mostra-nuova-1', 'Helvetica Neue', 'Helvetica'; font-weight: 400 }
 #city,
 #rain,
 #cloud1,
