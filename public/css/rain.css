@@ -48,6 +48,7 @@ footer,
 #controls { right: 10px }
 #controls input { display: block; border: 1px solid #CCC; width: 10em; font-family: inherit }
 footer  { left: 10px }
+#resolution { position: absolute; top: 700px; font-size: 2em; color: red }
 
 @-webkit-keyframes cloud1 {
   0%    { -webkit-transform: translate3d(-700px, 0, 0) }
